@@ -17,6 +17,6 @@ if [ ! -e recording.json ]; then
 fi
 
 echo "***** Processing captured requests"
-node process.js recording.json > minigun_recorded_script.json
+nohup node process.js recording.json > minigun_recorded_script.json
 rm recording.json
 echo "***** Minigun script created in recorded_script.json"

@@ -27,7 +27,7 @@ def response(context, flow):
     #
     headers = []
 
-    for h in flow.request.headers:
+    for h in flow.request.headers.fields:
       if not(h[0].lower() in exclude_headers):
         headers.append([h[0].lower(), h[1]])
 
